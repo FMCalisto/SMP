@@ -48,6 +48,10 @@ main(){
   /* Add L1 data cache misses to our Event Set */
   if (PAPI_add_event(EventSet, PAPI_L1_DCM) != PAPI_OK)
     handle_error(1,"add_event");
+    
+  /* Add L2 data cache misses to our Event Set */
+  if (PAPI_add_event(EventSet, PAPI_L2_DCM) != PAPI_OK)
+    handle_error(1,"add_event");
 
   /************************************/
 
